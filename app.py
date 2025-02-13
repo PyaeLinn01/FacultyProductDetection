@@ -60,14 +60,14 @@ if uploaded_file is not None:
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
         # Display uploaded image
-        st.image(image_rgb, caption="Uploaded Image", use_column_width=True)
+        st.image(image_rgb, caption="Uploaded Image", use_container_width=True)
 
         st.write("Processing image for scratches...")
         processed_image, detected_classes = process_frame_with_results(image)
 
         # Convert processed image back to RGB for display
         processed_image_rgb = cv2.cvtColor(processed_image, cv2.COLOR_BGR2RGB)
-        st.image(processed_image_rgb, caption="Detection Results", use_column_width=True)
+        st.image(processed_image_rgb, caption="Detection Results", use_container_width=True)
 
         if detected_classes:
             st.subheader("Detected Defects:")
