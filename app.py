@@ -49,7 +49,7 @@ def process_frame_with_results(cv_image):
     return cv_image, list(detected_classes)
 
 # Streamlit Application
-st.title("Faculty Product Detection - Screen Scratches")
+st.title("Faulty Product Detection - Screen Scratches")
 
 uploaded_file = st.file_uploader("Upload an image to detect scratches", type=["jpg", "jpeg", "png", "webp"])
 
@@ -72,7 +72,7 @@ if uploaded_file is not None:
         if detected_classes:
             st.subheader("Detected Defects:")
             for detected_class in detected_classes:
-                st.write("Faculty Product")
+                st.write("Scratches!!!")
         else:
             st.write("No scratches detected.")
     except Exception as e:
